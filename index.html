@@ -91,6 +91,17 @@ nav .btn{min-height:40px;padding:0 18px;font-size:14px}
 .how p{color:var(--soft)}
 @media(max-width:860px){.how{grid-template-columns:minmax(0,1fr)}}
 
+
+/* features */
+.groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.group{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,30px);display:flex;flex-direction:column;gap:16px}
+.group h3{display:flex;align-items:center;gap:12px}
+.group h3 span{width:38px;height:38px;flex:none;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.feat{display:flex;flex-direction:column;gap:2px}
+.feat b{font-weight:700}
+.feat p{color:var(--soft);font-size:16px}
+@media(max-width:760px){.groups{grid-template-columns:minmax(0,1fr)}}
+
 /* clive */
 .clive .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px);align-items:center}
 .badge{aspect-ratio:1;max-width:320px;width:100%;border-radius:50%;background:linear-gradient(160deg,var(--sky1),var(--sky2));display:grid;place-items:center;justify-self:center}
@@ -125,7 +136,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
   <div class="wrap">
     <a class="logo" href="#top"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" style="fill:var(--accent)"/><path d="M7 20c5-1 10-4 18-11" style="stroke:var(--accent-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>Glidepal</a>
     <a class="link" href="#moments">What you'll hear</a>
-    <a class="link" href="#how">How it works</a>
+    <a class="link" href="#features">Features</a>
     <a class="link" href="#clive">About</a>
     <a class="link" href="#pricing">Pricing</a>
     <a class="btn" href="#launch">Get notified</a>
@@ -201,7 +212,43 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
   </div>
 </section>
 
-<section class="band clive" id="clive">
+
+<section class="band" id="features">
+  <div class="wrap">
+    <div class="head">
+      <h2>Everything a nervous flyer needs, before, during and after.</h2>
+      <p class="lead">The tools people rely on in other fear-of-flying apps, built in one calm place, plus a few things only a pilot would think of.</p>
+    </div>
+    <div class="groups">
+      <div class="group">
+        <h3><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>Before you fly</h3>
+        <div class="feat"><b>Turbulence forecast for your flight</b><p>Enter your flight and date to see where the ride may get bumpy and for how long. Shown honestly as a forecast, because the sky changes.</p></div>
+        <div class="feat"><b>Weather at both ends, in plain words</b><p>The airport weather pilots read, translated: wind, clouds, rain, and what it means for your takeoff and landing.</p></div>
+        <div class="feat"><b>Which side to sit on</b><p>The window with the best view for your route and time of day.</p></div>
+      </div>
+      <div class="group">
+        <h3><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16l20-8-6 10-4-2-3 3v-5"/></svg></span>During the flight</h3>
+        <div class="feat"><b>Every moment explained, live</b><p>Taxi, takeoff, climb, cruise, descent and landing, narrated as they happen, in airplane mode.</p></div>
+        <div class="feat"><b>A bump meter</b><p>Shows how small the bumps really are, measured by your own phone, next to what the airplane is built to handle.</p></div>
+        <div class="feat"><b>Calm button</b><p>One tap for guided, slow breathing in your narrator's voice when your heart starts racing.</p></div>
+        <div class="feat"><b>Your flight on a simple map</b><p>Where you are, how high, how long to go, and what you're flying over.</p></div>
+      </div>
+      <div class="group">
+        <h3><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 20c.3-2.5 1.6-4 3.5-4 1.7 0 3 1.4 3 4"/></svg></span>Together with other flyers</h3>
+        <div class="feat"><b>Real turbulence reports from real phones</b><p>When several Glidepal flyers on the same route feel the same bumps, everyone after them gets a heads-up. One phone alone never counts.</p></div>
+        <div class="feat"><b>You're not the only one</b><p>See how many Glidepal flyers are on your flight, or flew your route this week.</p></div>
+      </div>
+      <div class="group">
+        <h3><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2zM8 7h6M8 11h6"/></svg></span>Between flights</h3>
+        <div class="feat"><b>Lessons from a pilot</b><p>How airplanes fly, what turbulence really is, and why pilots do what they do, in short lessons narrated by Clive.</p></div>
+        <div class="feat"><b>Something new every week</b><p>Fresh explanations and stories from the flight deck. Never news about accidents or incidents.</p></div>
+        <div class="feat"><b>Your flight diary</b><p>Sign in and every flight is saved, so you can watch your flights get calmer over time.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band clive alt" id="clive">
   <div class="wrap">
     <div class="badge" aria-hidden="true">
       <svg viewBox="0 0 100 100"><path d="M10 72 C35 70 55 56 90 24" style="stroke:var(--path)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-dasharray="1 8"/><g transform="translate(62 46) rotate(-38)"><path d="M-14 0 L12 0 M-2 -10 L5 0 L-2 10 M-13 -5 L-9 0 L-13 5" style="stroke:var(--ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
@@ -218,7 +265,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
   </div>
 </section>
 
-<section class="band alt" id="pricing">
+<section class="band" id="pricing">
   <div class="wrap">
     <div class="head"><h2>Free to start. Five voices to choose from.</h2></div>
     <div class="plans">
@@ -245,7 +292,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
   </div>
 </section>
 
-<section class="band launch" id="launch">
+<section class="band launch alt" id="launch">
   <div class="wrap">
     <h2>Fly with a friend in your pocket.</h2>
     <p class="lead">Glidepal is being tested on real flights now. Write to us and we'll tell you the day it's in the App Store.</p>
