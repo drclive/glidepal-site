@@ -1,0 +1,9 @@
+{
+  "name": "glidepal",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  // In-app feedback is emailed to Clive through Cloudflare Email Routing.
+  "send_email": [{ "name": "FEEDBACK", "destination_address": "clive@flyoversolutions.net" }],
+  "vars": { "APP_KEY": "b248c785825d8fd401ce18e81b5449a1" }
+}
